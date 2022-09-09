@@ -14,9 +14,16 @@ function getExchange() {
 
   // ui
   function printElements(data) {
-    document.getElementById('exchange').innerText = `${[data[0].conversion_rates.AED]}`;
-    console.log(data[0]);
-  }
+    const currencySelection = document.getElementById("currency-selection").value;
+
+    if (currencySelection === "AED") {
+      document.getElementById('exchange').innerText = `${[data[0].conversion_rates.AED]}`;
+    } else {
+      document.getElementById('exchange').innerText = `${[data[0].conversion_rates.AFN]}`;
+    }
+    }
+
+    // document.getElementById('exchange').innerText = `${[data[0].conversion_rates.AED]}`;
   
   function formHandler(event) {
     event.preventDefault();

@@ -8,26 +8,21 @@
   <div class="container">
     <form>
       <h1>Currency Exchange</h1>
-      <h2>Enter US Dollar Amount</h2>
-      <label for="inputdollar">$</label>
+      <br>
+      <label for="inputdollar">$USD</label>
       <input id="dollar" type="number">
-      <p><strong>Select currency type:</strong></p>
-      <label for="answer1">AED</label>
-      <input type="radio" name="question#1" value="AED" checked>
+      <br><br>
+      <label for="currency-selection"></label>
 
-      <label for="answer2">AFN</label>
-      <input type="radio" name="question#1" value="AFN">
-
-      <label for="answer3">ALL</label>
-      <input type="radio" name="question#1" value="ALL">
-
-      <label for="answer4">AMD</label>
-      <input type="radio" name="question#1" value="AMD">
-
-      <label for="answer5">ANG</label>
-      <input type="radio" name="question#1" value="ANG">
-
-      <h3 id="exchange"></h3>
+      <select name="currency" id="currency-selection">
+          <option value="">--Select Currency--</option>
+          <option value="AED">AED</option>
+          <option value="AFN">AFN</option>
+          <option value="ALL">ALL</option>
+          <option value="AMD">AMD</option>
+          <option value="ANG">ANG</option>
+      </select>
+      <p id="exchange">test</p>
       <button id="button" type="submit" class="btn btn-dark">Submit</button>
     </form>
   </div>
