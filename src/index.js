@@ -15,15 +15,20 @@ function getExchange() {
   // ui
   function printElements(data) {
     const currencySelection = document.getElementById("currency-selection").value;
+    const AED = 1 * `${[data[0].conversion_rates.AED]}`
 
     if (currencySelection === "AED") {
-      document.getElementById('exchange').innerText = `${[data[0].conversion_rates.AED]}`;
-    } else {
+      document.getElementById('exchange').innerText = AED;
+    } else if (currencySelection === "AFN") {
       document.getElementById('exchange').innerText = `${[data[0].conversion_rates.AFN]}`;
+    } else if (currencySelection === "ALL") {
+      document.getElementById('exchange').innerText = `${[data[0].conversion_rates.ALL]}`;
+    } else if (currencySelection === "AMD") {
+      document.getElementById('exchange').innerText = `${[data[0].conversion_rates.AMD]}`;
+    } else if (currencySelection === "ANG") {
+      document.getElementById('exchange').innerText = `${[data[0].conversion_rates.ANG]}`;
     }
     }
-
-    // document.getElementById('exchange').innerText = `${[data[0].conversion_rates.AED]}`;
   
   function formHandler(event) {
     event.preventDefault();
