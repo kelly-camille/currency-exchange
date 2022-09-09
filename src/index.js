@@ -7,8 +7,9 @@ function getExchange() {
   let promise = ExchangeService.getExchange();
   promise.then(function(data) {
     printElements(data);
-  // }, function(errorArray) {
-  //   printError(errorArray);
+  }, function(error) {
+    printError(error);
+    document.getElementById("exchange").innerText = `${[error.error-type]}`
   });
   }
 
