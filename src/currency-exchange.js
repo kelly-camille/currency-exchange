@@ -7,9 +7,9 @@ export default class ExchangeService {
       request.addEventListener("loadend", function() {
         const response = JSON.parse(this.responseText);
         if (this.status === 200) {
-          resolve([response]);
+          printElements([response]);
         } else {
-          reject([this, response]);
+          printError([this]);
         }
       });
       request.open("GET", url, true);

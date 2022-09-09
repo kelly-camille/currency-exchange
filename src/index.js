@@ -9,7 +9,7 @@ function getExchange() {
     printElements(data);
   }, function(error) {
     printError(error);
-    document.getElementById("exchange").innerText = `${[error.error-type]}`
+    document.getElementById("exchange").innerText = `${[result.error-type]}`
   });
   }
 
