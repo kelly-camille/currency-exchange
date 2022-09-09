@@ -7,9 +7,8 @@ function getExchange() {
   let promise = ExchangeService.getExchange();
   promise.then(function(data) {
     printElements(data);
-  }, function(error) {
-    printError(error);
-    document.getElementById("exchange").innerText = `${[result.error-type]}`
+  }, function(errorArray) {
+    printError(errorArray);
   });
   }
 
@@ -35,6 +34,10 @@ function getExchange() {
     }
     }
   
+    function printError(error) {
+      document.getElementById('exchange').innerText  = `There was an error accessing the weather data for ${error[2]}: ${error[0].status} ${error[0].statusText}: ${error[1].message}`;
+    }
+
   function formHandler(event) {
     event.preventDefault();
     getExchange();
