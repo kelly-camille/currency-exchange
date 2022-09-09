@@ -14,7 +14,8 @@ function getExchange() {
 
   // ui
   function printElements(data) {
-    document.getElementById('exchange').innerText = `${[data[0][0]]}`;
+    document.getElementById('exchange').innerText = `${[data[0].conversion_rates.AED]}`;
+    console.log(data[0]);
   }
   
   function formHandler(event) {
