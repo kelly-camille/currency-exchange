@@ -32,7 +32,18 @@ This application displays conversions of currencies between usd and other select
 * _Lint JS files in the src folder with $ npm run lint_
 * _Run tests with Jest using $ npm run test_
 * Open index.html in your browser default browser.
-* 
+
+The API functionalities will not be available until you do the following:
+
+* Visit the ExchangeRate-API site. Input your email address and click the "Get Free Key" button.
+* You'll be prompted to create an account with your email, first name and a password. Agree to the terms of use and click "Get Started!"
+* At this point, you'll be able to access a dashboard that includes your API key as well as your remaining API calls for the month.
+* Create a .env file in the root of the project 
+* run the following command in the command line  $ npm install dotenv-webpack@2.0.0 --save-dev
+* Configure webpack with const Dotenv = require('dotenv-webpack');
+* add new Dotenv() to plugins
+* store your API key in the .env file and name it API_KEY
+* call the key with ${process.env.API_KEY}
 
 ## Known Bugs
 
